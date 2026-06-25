@@ -1,0 +1,159 @@
+/* =========================================================
+   Liora — página de acesso
+   Direção: quiet luxury (paleta pedra/areia, serifa refinada)
+   ========================================================= */
+
+:root {
+  --stone-bg:     #E9E3D7;  /* areia clara, fundo */
+  --stone-bg-2:   #DED6C6;  /* areia média, gradiente */
+  --card:         #F6F2EA;  /* marfim, cartão */
+  --ink:          #2B2722;  /* tinta quase preta, texto */
+  --ink-soft:     #6B6357;  /* taupe, texto secundário */
+  --line:         #C9BFAE;  /* linha fina */
+  --accent:       #5A6B57;  /* sage discreto, único toque de cor */
+  --accent-deep:  #495943;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  font-family: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background:
+    radial-gradient(120% 120% at 50% 0%, var(--stone-bg) 0%, var(--stone-bg-2) 100%);
+  background-attachment: fixed;
+}
+
+.stage {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+/* ---- Cartão central (estrutura tipo popup) ---- */
+.card {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;            /* cantos quase retos, sóbrio */
+  padding: 52px 44px 40px;
+  text-align: center;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 24px 60px -28px rgba(43,39,34,0.40);
+  animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 26px;
+}
+
+.wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(46px, 13vw, 60px);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.rule {
+  width: 40px;
+  height: 1px;
+  background: var(--line);
+  margin: 22px auto 26px;
+}
+
+.lede {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+
+.body {
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.72;
+  color: var(--ink-soft);
+  max-width: 36ch;
+  margin: 0 auto 34px;
+}
+
+/* ---- Botão ---- */
+.cta {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--accent);
+  color: #F6F2EA;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.35s ease, transform 0.15s ease, box-shadow 0.35s ease;
+  box-shadow: 0 10px 24px -14px rgba(73,89,67,0.9);
+}
+
+.cta:hover { background: var(--accent-deep); box-shadow: 0 14px 30px -14px rgba(73,89,67,0.95); }
+.cta:active { transform: translateY(1px); }
+.cta:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 3px;
+}
+
+.note {
+  font-size: 11.5px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  margin-top: 18px;
+  opacity: 0.8;
+}
+
+/* ---- Assinatura sob o cartão ---- */
+.signature {
+  font-size: 10.5px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  opacity: 0.65;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 420px) {
+  .card { padding: 44px 28px 34px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card { animation: none; }
+  .cta { transition: background 0.2s ease; }
+}
