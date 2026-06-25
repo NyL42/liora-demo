@@ -1,7 +1,7 @@
 // =========================================================
 //  EDITE AQUI: cole o link da versão de apresentação da Liora
 // =========================================================
-const LINK_APRESENTACAO = "https://exemplo.com/liora-demo";
+const LINK_APRESENTACAO = "https://nyl42.github.io/Liora/";
 
 // Abrir em nova aba? true = sim, false = mesma aba
 const ABRIR_NOVA_ABA = true;
