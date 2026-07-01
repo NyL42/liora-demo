@@ -1,7 +1,7 @@
 // =========================================================
 //  EDITE AQUI: cole o link da versão de apresentação da Liora
 // =========================================================
-const LINK_APRESENTACAO = "https://exemplo.com/liora-demo";
+const LINK_APRESENTACAO = "https://nyl42.github.io/Liora/";
 
 // Link do material de apoio visual da apresentação (pitch_liora.html).
 const LINK_APOIO_VISUAL = "https://exemplo.com/liora-apoio";
