@@ -4,7 +4,7 @@
 const LINK_APRESENTACAO = "https://nyl42.github.io/Liora/";
 
 // Link do material de apoio visual da apresentação (pitch_liora.html).
-const LINK_APOIO_VISUAL = "https://exemplo.com/liora-apoio";
+const LINK_APOIO_VISUAL = "https://nyl42.github.io/liora-docs/";
 
 // Abrir em nova aba? true = sim, false = mesma aba
 const ABRIR_NOVA_ABA = true;
