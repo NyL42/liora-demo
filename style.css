@@ -134,6 +134,32 @@ body {
   opacity: 0.8;
 }
 
+/* ---- Link secundário (apoio visual) — discreto, sem competir com o botão ---- */
+.link-apoio {
+  display: inline-block;
+  margin-top: 22px;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.link-apoio:hover {
+  color: var(--accent-deep);
+  border-bottom-color: var(--line);
+}
+
+.link-apoio:focus-visible {
+  outline: 2px solid var(--accent-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* ---- Assinatura sob o cartão ---- */
 .signature {
   font-size: 10.5px;
